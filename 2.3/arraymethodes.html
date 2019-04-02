@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Array methodes</title>
+	</head>
+	<body>
+		<script>
+			var studenten = new Array(
+				'Zakaria','Albert','Hamsa','Mike','Pieter');
+			document.write('<br>Opgave 24: Studenten: ' + studenten);
+			team = studenten;
+			document.write('<br>Opgave 25: Team: ' + team);
+			team[0] = 'Umut';
+			document.write('<br>Opgave 26: Element [0] is gewijzigd: '+ studenten);
+			studenten.unshift('Jozef','Umut');
+			document.write(
+				'<br>Opgave 28: Resultaat van unshift: '+studenten);
+			studenten.pop();
+			document.write(
+				'<br>Opgave 29: Resultaat van pop: ' + studenten);
+			studenten.push('Pieter','David');
+			document.write(
+				'<br>Opgave 30: Resultaat van push: ' + studenten);
+			klas = studenten.splice(2,4);
+			document.write(
+				'<br>Opgave 31: Resultaat<br>studenten: ' + studenten + '<br>klas: '+ klas);
+			studenten.sort();
+			document.write(
+				'<br>Opgave 32: Resultaat van sort: ' + studenten);
+			studenten.reverse();
+			document.write(
+				'<br>Opgave 33: Resultaat van reverse: ' + klas);
+			index = studenten.indexOf('Jozef');
+			document.write(
+				'<br>Opgave 34: Resultaat van indexOf: ' + index);
+			delete klas[2];
+			document.write(
+				'<br>Opgave 35: Resultaat van delete: ' + klas);
+			document.write(
+				'<br>Opgave 36: Datatype van gedelete element is: '+ typeof klas[2]);
+			klas.splice[2,1];
+			document.write(
+				'<br>Opgave 37: Element volledig verwijderd: ' + klas);
+			index = studenten.indexOf('Jozef');
+			studenten.splice(index,1);
+			document.write(
+				'<br>Opgave 38: Specifieke student verwijderd: ' + studenten);
+			klas2 = klas.splice();
+			document.write(
+				'<br>Opgave 39: Resultaat van kopieren: ' + klas2);
+			var myString = klas.join('|');
+			document.write(
+				'<br>Opgave 40: Resultaat van join: ' + myString);
+			var myArray = myString.split('|');
+			document.write(
+				'<br>Opgave 41: Resultaat van split: ' + myArray);
+		</script>
+	</body>
+<html>
