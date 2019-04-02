@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lab 09</title>
+</head>
+<body>
+	<script>
+		var rol = prompt('Wat is je rol? ');
+		var inlogcode = prompt('Wat is je inlogcode? ');
+
+			switch(rol){
+			case 'admin':
+			if(inlogcode == 'admin'){
+			document.write('welkom ' + rol);
+			}else{
+			document.write('code ongeldig');
+			}
+			break;
+			case 'student':
+			if(inlogcode == 'student'){
+			document.write('welkom ' + rol);
+			}else{
+			document.write('code ongeldig');
+			}
+			break;
+			default:
+			document.write('rol ongeldig');
+		}
+		</script>
+</body>
+</html>

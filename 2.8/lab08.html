@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Lab 08</title>
+</head>
+<body>
+	<script>
+		var vandaag = new Date();
+		document.write('<br>Vandaag is: ' + vandaag);
+		var nu = Date.now();
+		var eenDag = 86400000;
+		var factuur = new Date(nu - (7 * eenDag));
+		document.write('<br>factuurdatum is: ' + factuur);
+		var nu = Date.now();
+		var eenDag = 86400000;
+		var betalen = new Date(nu + (7 * eenDag));
+		document.write('<br>Betaaldatum is: ' + betalen);
+		var resterend = (betalen - nu) / eenDag;
+		document.write('<br>U hebt nog: ' + resterend + ' dagen om te betalen'); 
+	</script>
+</body>
+</html>
