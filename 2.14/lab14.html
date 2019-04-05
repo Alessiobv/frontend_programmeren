@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+	<title>lab 14</title>
+</head>
+<body>
+	<script>
+		alfa = ['a','b','c', 'd','e','f', 'g','h','i', 'j','k','l', 'm','n','o', 'p','q','r', 's','t','u', 'v', 'w', 'x', 'y', 'z'];
+		function RandomLetters(){
+   			for(var x=0; x < 5; x++) {
+      			i = Math.floor((Math.random()*27));
+      			document.write( alfa[i]);
+   			}
+		}
+		RandomLetters();
+		document.write('<br>');
+		RandomLetters();
+		document.write('<br>');
+		RandomLetters();
+</script>
+</body>
+</html>
