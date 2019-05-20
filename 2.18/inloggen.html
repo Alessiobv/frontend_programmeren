@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Inlogscript</title>
+	<script src="cookiefunctions.js"></script>
+<style>
+	div{
+		height: 120px;
+		width: 200px;
+		padding: 20px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: gray;
+		border-radius: 5%;
+		background-color: rgb(217,217,0);
+	}
+</style>
+</head>
+<body>
+	<form
+		name="inlog"
+		action="welkom.html"
+		method="POST"
+		onsubmit=
+		"maakCookie('user',document.inlog.user.value,1);
+		maakCookie('password',document.inlog.password.value,1);">
+			Email-adres:
+			<input type="email" size="20" id="user">
+			Wachtwoord:
+			<input type="password" size="20" id="password">
+			<hr>
+				<input type="submit" value="verzenden">
+	</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<script src="cookiefuncties.js"></script>
+	<script src="shoppingcart.js"></script>
+</head>
+<body>
+<img src="toshiba.jpg" alt=" ">
+<p>Toshiba Satellite A100 Prijs 999.99</p>
+<form name="orderform"
+	action="managecart.html"
+	method="get"
+	onsubmit="bestellen(this);">
+	Aantal:
+	<input type="text" size=2 id="aantal" value="1">
+	<input type="image" src="images/cart.jpg">
+	<input type="hidden" id="id" value=1>
+	<input type="hidden" id="merk" value="Toshiba">
+	<input type="hidden" id="model" value="Satellite">
+	<input type="hidden" id="prijs" value="999.99">
+</form>
+<hr>
+<img src="acer.jpg" alt=" ">
+<p>Acer Aspire 3072 MB - 160 GB Prijs 529.99</p>
+<form name="orderform"
+	action="managecart.html"
+	method="get"
+	onsubmit="bestellen(this);">
+	Aantal:
+	<input type="text" size=2 id="aantal" value="1">
+	<input type="image" src="images/cart.jpg">
+	<input type="hidden" id="id" value=2>
+	<input type="hidden" id="merk" value="Acer">
+	<input type="hidden" id="model" value="Aspire">
+	<input type="hidden" id="prijs" value="529.99">
+</form>
+<hr>
+</body>
+</html>

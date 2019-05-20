@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Binary-search</title>
+	</head>
+<body>
+	<script>
+		var studenten = new Array(16);
+		studenten[0] = {'naam':'Navajo', '06':'1234567800'};
+		studenten[1] = {'naam':'Zakaria', '06':'1234567801'};
+		studenten[2] = {'naam':'Hamsa', '06':'1234567802'};
+		studenten[3] = {'naam':'Guus', '06':'1234567803'};
+		studenten[4] = {'naam':'Mitchel', '06':'1234567804'};
+		studenten[5] = {'naam':'Jan', '06':'1234567805'};
+		studenten[6] = {'naam':'Idris', '06':'1234567806'};
+		studenten[7] = {'naam':'Kees', '06':'1234567807'};
+		studenten[8] = {'naam':'Umut', '06':'1234567808'};
+		studenten[9] = {'naam':'Charles', '06':'1234567809'};
+		studenten[10] = {'naam':'Pedro', '06':'1234567810'};
+		studenten[11] = {'naam':'Joshua', '06':'1234567811'};
+		studenten[12] = {'naam':'Angelo', '06':'1234567812'};
+		studenten[13] = {'naam':'Peter', '06':'1234567813'};
+		studenten[14] = {'naam':'Audi', '06':'1234567814'};
+		studenten[15] = {'naam':'Arnold', '06':'1234567815'};
+
+		function zoekalgoritme(studenten, key, imin, imax){
+			// test of array leeg is
+			if (imax < imin){
+				// array is leeg
+				return('Niet gevonden');
+			} else {
+				imid = Math.ceil(imin + ((imax - imin) / 2));
+				//vergelijken
+				if (imid > key){
+					//zoek in onderste sub-array
+					document.write('<br>onderste imin: ' + imin);
+					document.write('<br>onderste imid: ' + imid);
+					return(zoekalgoritme(studenten, key, imin, imid-1));
+				}
+				else if(imid < key){
+					//zoek in bovenste sub-array
+					document.write('<br>bovenste imax: ' + imax);
+					document.write('<br>bovenste imid: ' + imid);
+					return(zoekalgoritme(studenten, key, imid+1, imax));
+				} else{
+					// key is gevonden
+					return(studenten[imid]['naam']+studenten[imid]['06']);
+				}
+			}
+		}
+		var id = parseInt(prompt('Zoek student ID'));
+		var eindindex = studenten.length;
+		document.write('eindindex: '+eindindex + '<br>');
+		var beginindex = 0;
+		var student=zoekalgoritme(studenten,id,beginindex,eindindex);
+		document.write('<br>Student gevonden: ' + student);
+	</script>
+</body>
+</html>

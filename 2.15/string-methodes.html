@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<title>string-methods</title>
+		<!--dit script: gebruikt string methodes -->
+	</head>
+<body>
+	<script>
+		var titel = 'javascript';
+		document.write('<br>Index van letter s is: ' +
+			titel.indexOf('s'));
+		var string =
+		"Dit is een lange tekst met daarin het woord javascript";
+		document.write('<br>Positie van het woord javascript is: ' + 
+			string.indexOf('javascript'));
+		document.write('<br>Positie van het woord HTML is ' + 
+			string.indexOf('HTML'));
+		if(navigator.userAgent.indexOf('MSIE') != -1){
+			document.write('<br>Browser is Inter Explorer');
+		} else if(navigator.userAgent.indexOf('Firefox') != -1){
+			document.write('<br>Browser is Firefox');
+		} else if(navigator.userAgent.indexOf('Chrome') != -1){
+			document.write('<br>Browser is Google Chrome');
+		}
+		var titel = 'JavaScript';
+		document.write('<br>De lengte van titel is: ' + titel.length);
+		var title = 'JavaScript';
+		var spiegeling = ' '; for(x=0; x < title.length; x++){
+			teken = title.charAt(x);
+			spiegeling = teken + spiegeling;
+		}
+		document.write('<br>JavaScript gespiegeld: ' + spiegeling);
+		var tekst = 
+		'dit is een lange tekst met daarin het woord javascript';
+		splitsing = tekst.split(' ');
+		document.write('<br>De resulterende array is: ' + splitsing);
+		var string = 
+		'dit is een lange string met daarin het woord javascript';
+		substring = string.substring(11,23);
+		document.write('<br>Substring van string: ' + substring);
+		string = string.substr( 0,string.indexOf('javascript')) + 
+		string.substr( string.indexOf('javascript')+10, string.length);
+		document.write('<br>String is nu: ' + string);
+		var cursus = prompt('Kies een van de volgende ' + 
+			'cursussen HTML of JavaScript');
+		if(cursus.toLowerCase() == 'html' ||
+			cursus.toLowerCase() == 'javascript'){
+			document.write('<br>Je hebt: '+cursus.toUpperCase()+' gekozen.');
+		} else{
+			document.write('<br>Kies een geldige cursus');
+		}
+	</script>
+</body>
+</html>

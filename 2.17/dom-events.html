@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM events</title>
+	<script src="dom-events.js"></script>
+	<script>
+		document.write('<form name="klok"> ' + ' <input type="text" ' + 'name="display" '+ 'size="8" '+ 'style="background-color: #30CE28; font-size: 44px" >' + '</form>');
+		var nu = new Date();
+		var uur = nu.getHours();
+		var min = nu.getMinutes();
+		var sec = nu.getSeconds();
+		var alterneren = 0;
+		function showklok(){
+			min=((min < 10) ? '0': '') + min;
+			if(alterneren) {
+				document.klok.display.value=uur + ':' + min;
+				alterneren = 0;
+			} else {
+				document.klok.display.value=uur + ' ' + min;
+				alterneren = 1;
+			}
+			nu = new Date(); uur = nu.getHours(); min = nu.getMinutes();
+			setTimeout('showklok()',1000);
+		}
+	</script>
+</head>
+<body onload="showklok();">
+	<div>
+		<a href="Javascript: showMedia();">
+		<img src="ipad.jpg" id="media"
+		onmouseover="this.width=this.width*1.5"
+		onmouseout="this.width=this.width/1.5"> </a>
+	</div>
+	<label for="man">Man: </label>
+	<input type="radio" name="geslacht" id="man" value="m"
+	onchange="
+		if(document.custform.man.checked == true) {
+			alert('Welkom meneer!');
+		}">
+	<label for="vrouw">Vrouw: </label>
+	<input type="radio" name="geslacht" id="vrouw" value="v"
+	onchange="
+		if(document.custform.vrouw.checked == true) {
+			alert('Welkom mevrouw!');
+		}">
+	<input type="submit" id="submit" name="submit"
+		value="verzenden"
+		onmouseover="style.color='green'"
+		onmouseout="style.color='black'"
+	>
+	<form action="mailto: email@adres.nl"
+		value="verzenden"
+		onmouseover="style.color='green'"
+		onmouseout="style.color='black'"
+	>
+	<input type="checkbox"
+		name="gadget"
+		id="smartphone"
+		value="s"
+		onchange="
+		if(document.custform.gadget[0].checked)
+			{
+				alert('Smartphone besteld!');
+			}"
+	>
+	<select onchange="
+		if(document.custform.bezorging.value == 'express'){
+			getElementById('expres-info').style.display='block';
+			getElementById('dag-info').style.display='none';
+			getElementById('week-info').style.display='none';
+		}"
+	name="bezorging">
+	<br>
+	<div id="expres-info" style="display:none">Express bestelling</div>
+	<div id="dag-info" style="display:none">Dag bestelling</div>
+	<div id="week-info" style="display:none">Week bestelling</div>
+	<br>
+
+	<input required type="password" id="password"
+	placeholder="vul uw wachtwoord in"
+	onkeyup="herhalen()">
+</body>
+</html>

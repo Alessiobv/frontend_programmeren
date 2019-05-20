@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<title>Manage Cart</title>
+	<script src="cookiefunctions.js"></script>
+	<script src="shoppingcart.js"></script>
+	<style>
+		table{
+			width: 70%;
+			border-style: solid;
+		}
+		th{
+			background-color: #cccccc;
+		}
+		td{
+			width: 25%;
+			font-weight: bold;
+			text-align: center;
+		}
+		input{
+			background-color: bisque;
+		}
+	</style>
+</head>
+<body>
+	<p>Overzicht van Uw shoppingcart:</p>
+	<form action="mailto: webshop@xxlcomputers.nl"
+		enctype="text/plain"
+		onsubmit="return checkForm(this);"
+		method="post">
+	<table><tr>
+		<th> ID </th>
+		<th> Merk </th>
+		<th> Model </th>
+		<th> Prijs </th>
+		<th> Aantal </th>
+	</tr>
+	<script>
+		cartWeergeven();
+	</script>
+</table>
+<br><br>
+</form>
+</body>
+</html>
