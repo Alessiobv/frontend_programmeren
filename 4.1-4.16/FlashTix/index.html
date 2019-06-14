@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<title>Flashtix</title>
+		<meta name="viewport"content = "width=device-width, initial-scale=1">
+		<link   rel="stylesheet"  href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js">
+		</script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+		</script>
+		<link rel="stylesheet" href="flashtix.css">
+		<script src="flashtix.js"></script>
+		<link href="jquery.socialist.css" rel="stylesheet">
+		<script src="jquery.socialist.js"></script>
+	</head>
+	<body>
+	<!-- homepage -->
+		<div data-role="page" class="page" id="homepage">
+			<div Class="header" data-role="header" data-theme="b">
+				<div class="nav" data-role="controlgroup">
+					<div class="ui-grid-b">
+						<div class="ui-block-a">
+						<a class="knop" href="#homepage"data-role="button"data-icon="home"data-iconpos="left">Home</a></div>
+   						<div class="ui-block-b"><a class="knop" href="#homepage"data-role="button"> Welkom</a></div>
+						<div class="ui-block-c"><a class="knop" href="#lastminutepage"data-role="button"data-icon="arrow-r"data-iconpos="left"data-transition="slidedown"> Lastminute</a>
+						</div>
+	    <!-- homecontent -->
+		<div class="content" id="homecontent" data-role="content">
+			<br><br>
+			<h1>Flashtix</h1>
+			<canvas id = "mycanvas"></canvas>
+			<img id="poster" class="poster" src="../images/flashtix.jpg">
+		</div> <!-- einde homecontent -->          
+					</div> <!-- /grid-b -->
+				</div> <!-- nav -->
+			</div> <!-- /header -->
+		</div><!-- /homepage -->
+
+	<div data-role="tabs" id="tabs">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#video" data-ajax="false">Video</a></li>
+					<div id ="video" class="ui-body-d ui-content">
+						<h1>Video</h1>
+						<video controls="controls" width="90%"
+							preload id="video" poster="FlashTix/images/shakiraposter.jpg">
+							<source src="shakira.mp4" type="video/mp4">
+							<source src="shakira.webm" type="video/webm">
+							<source src="shakira.3gpp" type="video/3gpp">
+						</video><!-- einde video -->
+					</div>
+				<li><a href="#bio" data-ajax="false">Biografie</a></li>
+				</ul>
+			</div>
+
+	</div> <!-- einde tabs -->
+	<p>Aliquameratvolutpat. Mauris vel nequesitamet nunc
+	gravida conquesitametpurus. quisquelacusquam,
+	egestasactincidunt a, lacinia vel velit. Morbiac commodo nulla</p>
+		</div><!-- einde content-->
+<!-- footer -->
+	<div class="footer" data-role="footer" data-theme="b">
+		<div class="nav" data-role="controlgroup">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+				<a class="knop" href="#agendapage"data-role="button"data-icon="grid"data-iconpos="left">Agenda</a>
+				</div>
+				<div class="ui-block-b"><a class="knop" href="#locationpage"data-role="button"data-icon="search"data-iconpos="left">Location</a>
+				</div>
+			</div><!-- /grid-a -->
+		</div><!-- /nav -->
+	</div><!-- footer -->
+</div> <!-- einde shakira-biopage -->
+	<div data-role="page" class="page" id="Lopez-biopage">
+		<div Class="header" data-role="header" data-theme="b">
+			<div class="nav" data-role="controlgroup">
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<a class="knop" href="#lastminutepage"data-role="button"data-icon="arrow-l"data-iconpos="left">Vorige</a></div>
+   						<div class="ui-block-b"><a class="knop" href="#homepage"data-role="button" data-icon="home"> Home</a></div>
+						<div class="ui-block-c"><a class="knop" href="#bestelpage"data-role="button"data-icon="arrow-r"data-iconpos="left"data-transition="slidedown"> Bestel</a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--start video-->
+		<div data-role="content">
+			<video controls="controls" position="center" width="100%" height= "500px" preload id="video" poster="../images/Lopezposter.jpg">
+				<source src="shakira.mp3" type="video/mp4">
+				<source src="shakira.webm" type="video/webm">
+				<source src="shakira.3gpp" type="video/gpp">
+			</video><!--einde video-->
+	<p>Aliquameratvolutpat. Mauris vel nequesitamet nunc
+	gravida conquesitametpurus. quisquelacusquam,
+	egestasactincidunt a, lacinia vel velit. Morbiac commodo nulla</p>
+		</div><!-- einde content-->
+	<!-- footer -->
+		<div class="footer" data-role="footer" data-theme="b">
+			<div class="nav" data-role="controlgroup">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a class="knop" href="#agendapage"data-role="button"data-icon="grid"data-iconpos="left">Agenda</a>
+					</div>
+					<div class="ui-block-b"><a class="knop" href="#locationpage"data-role="button"data-icon="search"data-iconpos="left">Location</a>
+					</div>
+				</div><!-- /grid-a -->
+			</div><!-- /nav -->
+		</div><!-- footer -->
+	</div> <!-- einde Lopez-biopage -->
+	<div data-role="page" class="page" id="nora-biopage">
+		<div Class="header" data-role="header" data-theme="b">
+			<div class="nav" data-role="controlgroup">
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<a class="knop" href="#lastminutepage"data-role="button"data-icon="arrow-l"data-iconpos="left">Vorige</a></div>
+   						<div class="ui-block-b"><a class="knop" href="#homepage"data-role="button" data-icon="home"> Home</a></div>
+						<div class="ui-block-c"><a class="knop" href="#bestelpage"data-role="button"data-icon="arrow-r"data-iconpos="left"data-transition="slidedown"> Bestel</a>
+						</div>
+					</div>
+				</div>
+			</div>	
+		<!--start video-->
+			<div data-role="content">
+				<video controls="controls" position="center" width="100%" height= "500px" preload id="video" poster="../images/Noraposter.jpg">
+					<source src="shakira.mp3" type="video/mp4">
+					<source src="shakira.webm" type="video/webm">
+					<source src="shakira.3gpp" type="video/gpp">
+				</video><!--einde video-->
+	<p>Aliquameratvolutpat. Mauris vel nequesitamet nunc
+	gravida conquesitametpurus. quisquelacusquam,
+	egestasactincidunt a, lacinia vel velit. Morbiac commodo nulla</p>
+			</div><!-- einde content-->
+		<!-- footer -->
+			<div class="footer" data-role="footer" data-theme="b">
+				<div class="nav" data-role="controlgroup">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+						<a class="knop" href="#agendapage"data-role="button"data-icon="grid"data-iconpos="left">Agenda</a>
+						</div>
+						<div class="ui-block-b"><a class="knop" href="#locationpage"data-role="button"data-icon="search"data-iconpos="left">Location</a>
+						</div>
+					</div><!-- /grid-a -->
+				</div><!-- /nav -->
+			</div><!-- footer -->	
+		</div> <!-- einde nora-biopage -->
+			<div data-role="page" class="page" id="popek-biopage">
+				<div Class="header" data-role="header" data-theme="b">
+					<div class="nav" data-role="controlgroup">
+						<div class="ui-grid-b">
+							<div class="ui-block-a">
+							<a class="knop" href="#lastminutepage"data-role="button"data-icon="arrow-l"data-iconpos="left">Vorige</a></div>
+							<div class="ui-block-b"><a class="knop" href="#homepage"data-role="button" data-icon="home"> Home</a></div>
+							<div class="ui-block-c"><a class="knop" href="#bestelpage"data-role="button"data-icon="arrow-r"data-iconpos="left"data-transition="slidedown"> Bestel</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		<!--start video-->
+			<div data-role="content">
+				<video controls="controls" position="center" width="90%" height= "500px" preload id="video" poster="../images/bruceposter.jpg">
+					<source src="shakira.mp3" type="video/mp4">
+					<source src="shakira.webm" type="video/webm">
+					<source src="shakira.3gpp" type="video/gpp">
+				</video><!--einde video-->
+	<p>Aliquameratvolutpat. Mauris vel nequesitamet nunc
+	gravida conquesitametpurus. quisquelacusquam,
+	egestasactincidunt a, lacinia vel velit. Morbiac commodo nulla</p>
+			</div><!-- einde content-->
+		<!-- footer -->
+			<div class="footer" data-role="footer" data-theme="b">
+				<div class="nav" data-role="controlgroup">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<a class="knop" href="#agendapage"data-role="button"data-icon="grid"data-iconpos="left">Agenda</a>
+						</div>
+						<div class="ui-block-b"><a class="knop" href="#locationpage"data-role="button"data-icon="search"data-iconpos="left">Location</a>
+						</div>
+					</div><!-- /grid-a -->
+				</div><!-- /nav -->
+			</div><!-- footer -->
+		</div> <!-- einde nora-biopage -->
+			<div data-role="page" class="page" id="bestelpage">
+			<!--  header -->
+				<div Class="header" data-role="header" data-theme="b">
+					<div class="nav" data-role="controlgroup">
+						<div class="ui-grid-b">
+							<div class="ui-block-a">
+								<a class="knop" href="#lastminutepage"data-role="button"data-icon="arrow-l"data-iconpos="left">Vorige</a></div>
+   								<div class="ui-block-b"><a class="knop" href="#homepage"data-role="button" data-icon="home"> Home</a></div>
+								<div class="ui-block-c"><a class="knop" href="#bestelpage"data-role="button"data-icon="arrow-r"data-iconpos="left"data-transition="slidedown"> E-tickets</a>
+								</div>
+							</div>
+						</div>
+					</div>
+			<!---einde header-->
+
+<div data-role="content" class="content">
+	<form name="form" id="form">
+	<p>Kies een concert</p>
+		<input type="radio" name="concert" value="shakira">
+		<label for="shakira">Shakira</label>
+		<input type="radio" name="concert" value="lopez">
+		<label for="lopez">Jeniffer Lopez</label>
+		<input type="radio" name="concert" value="nora">
+		<label for="nora">Nora</label>
+		<input type="radio" name="concert" value="popek">
+		<label for="popek">Popek Monster</label>
+		<br><br><br><br>
+		<label for="aantal">Aantal sterren</label>
+		<input type="range" name="aantal" id="aantal" min="1" max="10">
+			<div data-role="fieldcontain">
+				<input class="required" type="text" id="naam" name="naam" placeholder="Typ hier je naam in">
+				<input class="required" type="text" id="email" name="Email" placeholder="Typ hier je E-mail in">
+				<input class="required" type="text" id="nummer" name="naam" placeholder="Typ hier je telefoonnummmer in in">
+				<label for="minderjarig">Minderjarig:</label>
+				<select name="slider" id="minderjarig" data-role="slider" data-mini="true">
+				<option value="nee">Nee</option>
+				<option value="jaa">Ja</option>
+				</select></br></br>
+				<input type="text" name="plaats" id="plaats" list="steden" placeholder="woonplaats">
+				<datalist id ="steden">
+					<option value="Almere">
+					<option value="Amstelveen">
+					<option value="Amsterdam">
+					<option value="Den Haag">
+					<option value="Hilversum">
+					<option value="Leeuwarden">
+					<option value="Maastricht">
+					<option value="Naarden">
+					<option value="Utrecht">
+				</datalist>
+			<textarea cols="35" rows="4" name="reactie" id="reactie" placeholder="mail ons je reactie">
+			</textarea>
+			<div data-role="controlgroup">
+			<p>Kies een gratis abonnement</p>
+				<input type="checkbox" name="news" id="news">
+				<label for="news">FlashTixNewsletter</label>
+				<input type="checkbox" name="gids" id="gids">
+				<label for="gids">Uitgids</label>
+				<input type="checkbox" name="fest" id="fest">
+				<label for="fest">Festival Gids</label>
+			</div><!--einde controlgroup-->
+		</div><!--einde fieldcontain-->
+	<input type="submit" id="submit" value="Verzend">
+	<br><br><br><br><br><br>
+	</form><!--einde form-->
+</div><!--einde content-->
+
+	<!-- footer -->
+		<div class="footer" data-role="footer" data-theme="b">
+			<div class="nav" data-role="controlgroup">
+				<div class="ui-grid-b">
+					<div class="ui-block-b">
+						<a class="knop" href="#agendapage"data-role="button"data-icon="grid"data-iconpos="left">Agenda</a>
+					</div>
+					<div class="ui-block-b"><a class="knop" href="#locationpage"data-role="button"data-icon="search"data-iconpos="left">Location</a>
+					</div>
+				</div><!-- /grid-a -->
+			</div><!-- /nav -->
+		</div><!-- footer -->
+	</div><!--einde bestelpage-->
+	<div data-role="page" id="lastminutepage">
+		<div Class="header" data-role="header" data-theme="b">
+			<div class="nav" data-role="controlgroup">
+				<div ><a class="knop" href="#homepage"data-role="button"data-icon="arrow-l"data-iconpos="left">vorige</a>
+				<a class="button" href="#homepage"data-role="button"data-icon="home"data-iconpos="left">Home</a>
+				<a class="button" href="#bestelpage"data-role="button"data-icon="plus"data-iconpos="left">Bestel</a></div>        
+			</div>
+		</div><!-- einde lastminutpage -->
+	<div data-role="content" class="content" id="lastminutecontent"><br>
+		<ul data-role="listview">
+			<li id="pop" data-role="list-divider" data-theme="b">POP</li>
+			<li id="shakira-concert">
+				<a href="#shakira-biopage">
+					<img class="poster" src="../images/shakiraposter.jpg">
+					<h3>Shakira</h3>
+					<p>Amsterdam</p>
+					<p>Vandaag</p>
+				</a>
+				<a href="#shakira-biopage" data-transition="flip">
+				</a>
+			</li>
+			<li id="#Lopez-concert">
+				<a href="#Lopez-biopage">
+					<img class="poster" src="../images/lopezposter.jpg">
+					<h3>Jennifer Lopez</h3>
+					<p>Amsterdam</p>
+					<p>Vandaag 22:30</p>
+				</a>
+				<a href="#Lopez-biopage" data-transition="slideup">
+				</a>
+			</li>
+		</ul><!---/listview-->
+	</div><!---/content--> 
+
+<div data-role="content" class="content" id="lastminutecontent"><br>
+	<ul data-role="listview">
+		<li id="pop" data-role="list-divider" data-theme="b">Jazz</li>
+		<li id="#nora-concert">
+			<a href="#nora-biopage">
+				<img class="poster" src="../images/noraposter.jpg">
+				<h3>Nora</h3>
+				<p>Amsterdam</p>
+				<p>Vandaag</p>
+			</a>
+			<a href="#nora-biopage" data-transition="slideup">
+			</a>
+		</li>
+	</ul><!---/listview-->
+</div><!---/content--> 
+ 
+<div data-role="content" class="content" id="lastminutecontent"><br>
+	<ul data-role="listview">
+		<li id="pop" data-role="list-divider" data-theme="b">Rap</li>
+		<li id="#popek-concert">
+			<a href="#popek-biopage">
+				<img class="poster" src="../images/bruceposter.jpg">
+				<h3>Gang Albani</h3>
+				<p>Amsterdam</p>
+				<p>Vandaag 23:30</p>
+			</a>
+			<a href="#popek-biopage" data-transition="slideup">
+			</a>
+		</li>
+	</ul><!---/listview-->
+</div><!---/content--> 
+ 
+	<!-- footer -->
+		<div class="footer" data-role="footer" data-theme="b">
+			<div class="nav" data-role="controlgroup">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a class="knop" href="#agendapage"data-role="button"data-icon="grid"data-iconpos="left">Agenda</a>
+						<div data-role="page" class="page" id="eticketpage">
+							<div data-role="content" class="content">
+								<div id="etickets"></div>
+							</div>
+						</div><!-- einde eticketspage -->
+					</div>
+					<div class="ui-block-b">
+						<a class="knop" href="#locationpage"data-role="button"data-icon="search"data-iconpos="left">Location</a>
+					</div>
+				</div><!-- /grid-a -->
+			</div><!-- /nav -->
+		</div>
+	<!-- footer -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+#agendalijst{
+	padding: 0px 10px 0px 10px;
+	list-style-type: none;
+	width: 95%;
+}
+.agendaitem{
+	padding: 0px 0px 0px 0px;
+	background-color: #F7F387;
+	border: 0px;
+	border-bottom: solid 1px #3DD0B3;
+	text-align: left;
+}
+#itemdate{
+	background-color: #F7F387;
+	border: 0px;
+	width: 35%;
+}
+#itemtext{
+	background-color: #F7F387;
+	border: 0px;
+	width: 50%;
+}
